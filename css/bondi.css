@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  /* background-color: var(--red-color);
+  color: var(--yellow-color); */
+  padding: 0.5rem 1rem;
+}
+.container .icon {
+  color: var(--yellow-color);
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--green-color);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar {
+  background-color: #1c2737;
+  opacity: 1;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-brand {
+  /* font-family: "Passions Conflict", cursive; */
+  font-family: "Dancing Script", cursive;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+}
+.navbar .navbar-brand .letters {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 2;
+  position: absolute;
+  color: var(--green-color);
+  bottom: 2px;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+.landing {
+  background-image: url(../assets/feather.jpg);
+  min-height: calc(100vh - 72px);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.landing .color {
+  background-color: var(--dark-color);
+  opacity: 0.7;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  min-height: calc(100vh - 72px);
+}
+
+.landing .text {
+  z-index: 1;
+}
+
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work .container ul .active {
+  /* background-color: var(--red-color); */
+  color: var(--yellow-color);
+}
+.our-work .container ul button:not(.active):hover {
+  /* color: var(--red-color); */
+  color: var(--yellow-color);
+}
+.our-work .container ul button {
+  color: black;
+}
+
+.our-work .box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 76%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateY(calc(100% + 5px));
+}
+
+.our-work .box:hover::before {
+  transform: translateY(0);
+}
+
+.stuff .container .description {
+  max-width: 500px;
+}
+
+.stuff .image {
+  position: relative;
+}
+
+.stuff .image .bondi {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  /* background-image: linear-gradient(82.5deg, var(--dark-color) 54.5%, #3b4756); */
+  background-color: var(--dark-color);
+  color: white;
+  font-family: "Dancing Script", cursive;
+  left: 50%;
+  top: 42.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  transform: translate(-50%, -45%);
+}
+.stuff .image .bondi span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 2;
+  position: absolute;
+  color: var(--green-color);
+  transform: translate(-50%, -45%);
+  left: 50%;
+  bottom: 40%;
+}
+
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team .box h4 {
+  background-color: var(--green-color);
+  /* color: white; */
+}
+
+.project {
+  background-color: var(--dark-color);
+}
+
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe .container input[type="email"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe .container input[type="email"]:focus {
+  outline: none;
+}
+
+.subscribe .container input[type="email"]::placeholder {
+  color: white;
+}
+
+.subscribe .container input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .container .logo {
+  position: relative;
+}
+.footer .container .logo .brand {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  height: 50px;
+  font-weight: bold;
+}
+.footer .container .logo .letters {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 2;
+  /* position: absolute; */
+  color: var(--green-color);
+  /* transform: translate(-50%, -45%); */
+  /* left: 49px; */
+  bottom: -17%;
+}
+
+.footer .copyright > span {
+  color: var(--green-color);
+}
+
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
+
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer .facebook {
+  background-color: #1877f2;
+}
+.footer .twitter {
+  background-color: #1da1f2;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+}
+.footer .youtube {
+  background-color: #ff0000;
+}
